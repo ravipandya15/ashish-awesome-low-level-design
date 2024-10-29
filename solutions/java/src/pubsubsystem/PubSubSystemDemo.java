@@ -1,7 +1,7 @@
 package pubsubsystem;
 
 public class PubSubSystemDemo {
-    public static void run() {
+    public static void main(String[] args) {
         // Create topics
         Topic topic1 = new Topic("Topic1");
         Topic topic2 = new Topic("Topic2");

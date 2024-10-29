@@ -18,4 +18,6 @@ public class FlightSearch {
                         && flight.getDepartureTime().toLocalDate().equals(date))
                 .collect(Collectors.toList());
     }
+
+    // can also  have getFlightById method ==> it totally depends on requirement
 }

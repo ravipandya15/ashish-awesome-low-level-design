@@ -36,6 +36,8 @@ public class Question implements Votable, Commentable {
         }
     }
 
+
+
     @Override
     public void vote(User user, int value) {
         if (value != 1 && value != -1) {

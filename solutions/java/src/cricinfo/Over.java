@@ -9,7 +9,7 @@ public class Over {
 
     public Over(int overNumber) {
         this.overNumber = overNumber;
-        this.balls = new ArrayList<>();
+        this.balls = new ArrayList<>(); // can we have specific size as 6
     }
 
     public void addBall(Ball ball) {

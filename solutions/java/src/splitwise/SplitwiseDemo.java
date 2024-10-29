@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 public class SplitwiseDemo {
-    public static void run() {
+    public static void main(String[] args) {
         SplitwiseService splitwiseService = SplitwiseService.getInstance();
 
         // Create users

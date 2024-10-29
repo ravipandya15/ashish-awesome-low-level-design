@@ -19,6 +19,8 @@ public class AirlineManagementSystem {
     private final BookingManager bookingManager;
     private final PaymentProcessor paymentProcessor;
 
+    // we can also create single instance ==> singleton pattern
+
     public AirlineManagementSystem() {
         flights = new ArrayList<>();
         aircrafts = new ArrayList<>();

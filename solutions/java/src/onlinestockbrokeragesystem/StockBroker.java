@@ -47,6 +47,12 @@ public class StockBroker {
 
     public void placeOrder(Order order) {
         orderQueue.offer(order);
+
+        // ******   Added By Me *************
+//        Thread thread = new Thread(this::processOrders);
+//        thread.start();
+        // ******   Added By Me *************
+
         processOrders();
     }
 

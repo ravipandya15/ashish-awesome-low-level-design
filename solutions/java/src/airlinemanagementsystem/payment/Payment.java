@@ -5,6 +5,7 @@ public class Payment {
     private final String paymentMethod;
     private final double amount;
     private PaymentStatus status;
+    // private String bookingNumber;  -> this payment is for which booking?
 
     public Payment(String paymentId, String paymentMethod, double amount) {
         this.paymentId = paymentId;

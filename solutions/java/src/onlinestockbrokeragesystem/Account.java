@@ -14,12 +14,16 @@ public class Account {
     }
 
     public synchronized void deposit(double amount) {
+        System.out.println("amount deposited by: " + amount);
         balance += amount;
+        System.out.println("balance after deposit: " + this.balance);
     }
 
     public synchronized void withdraw(double amount) {
         if (balance >= amount) {
+            System.out.println("amount withdraw by: " + amount);
             balance -= amount;
+            System.out.println("balance after withdraw: " + this.balance);
         } else {
             throw new InsufficientFundsException("Insufficient funds in the account.");
         }

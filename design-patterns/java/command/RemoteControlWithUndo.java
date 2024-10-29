@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class RemoteControlWithUndo {
     private List<Command> commands = new ArrayList<>();
     private List<Command> undoCommands = new ArrayList<>();

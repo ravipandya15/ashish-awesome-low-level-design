@@ -61,7 +61,7 @@ public class ConcertTicketBookingSystemDemo {
         List<Seat> availableSeats = concert.getSeats().stream()
                 .filter(seat -> seat.getStatus() == SeatStatus.AVAILABLE)
                 .limit(numberOfSeats)
-                .toList();
+                .collect(Collectors.toList());
         selectedSeats.addAll(availableSeats);
         return selectedSeats;
     }

@@ -48,16 +48,17 @@ public class SplitwiseService {
 
     private void splitExpense(Expense expense) {
         double totalAmount = expense.getAmount();
-        List<Split> splits = expense.getSplits();
+        List<Split> splits = expense.getSplits(); // it means amount is split between these many users, as Split has user and amount data
         int totalSplits = splits.size();
 
         double splitAmount = totalAmount / totalSplits;
         for (Split split : splits) {
             if (split instanceof EqualSplit) {
                 split.setAmount(splitAmount);
-            } else if (split instanceof PercentSplit percentSplit) {
-                split.setAmount(totalAmount * percentSplit.getPercent() / 100.0);
             }
+//            else if (split instanceof PercentSplit percentSplit) {
+//                split.setAmount(totalAmount * percentSplit.getPercent() / 100.0);
+//            }
         }
     }
 
@@ -83,6 +84,9 @@ public class SplitwiseService {
         return user1.getId() + ":" + user2.getId();
     }
 
+    // my approach
+    // settle balance should only allowed if user2 needs to pay user1.
+    // so in parameter if userId1 has balance < 0 then proceed else ignore.
     public void settleBalance(String userId1, String userId2) {
         User user1 = users.get(userId1);
         User user2 = users.get(userId2);

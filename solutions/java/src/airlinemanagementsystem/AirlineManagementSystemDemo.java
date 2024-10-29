@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class AirlineManagementSystemDemo {
-    public static void run() {
+    public static void main(String[] args) {
         AirlineManagementSystem airlineManagementSystem = new AirlineManagementSystem();
 
         // Create users
@@ -29,6 +29,8 @@ public class AirlineManagementSystemDemo {
         airlineManagementSystem.addFlight(flight1);
         airlineManagementSystem.addFlight(flight2);
 
+        // ther should be one abstract class like Airplane ad two child class, 1. Flight 2. Aircraft
+
         // Create aircrafts
         Aircraft aircraft1 = new Aircraft("A001", "Boeing 747", 300);
         Aircraft aircraft2 = new Aircraft("A002", "Airbus A380", 500);
@@ -42,6 +44,7 @@ public class AirlineManagementSystemDemo {
             System.out.println("Flight: " + flight.getFlightNumber() + " - " + flight.getSource() + " to " + flight.getDestination());
         }
 
+        // we haven't added seats in flights
         Seat seat = new Seat("25A", SeatType.ECONOMY);
 
         // Book a flight
