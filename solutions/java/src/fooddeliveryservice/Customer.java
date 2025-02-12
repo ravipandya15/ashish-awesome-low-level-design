@@ -1,5 +1,10 @@
 package fooddeliveryservice;
 
+// use inheritance
+//User -> id, name, email, phone No.
+//Customer extends User
+//DeliveryAgent extends User
+//DeliveryAgent has extra fields. ex. isAvailable
 public class Customer {
     private final String id;
     private final String name;

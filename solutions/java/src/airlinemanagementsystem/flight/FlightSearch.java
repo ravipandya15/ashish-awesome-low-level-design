@@ -20,4 +20,5 @@ public class FlightSearch {
     }
 
     // can also  have getFlightById method ==> it totally depends on requirement
+    // add new flights (onboard new flights)
 }

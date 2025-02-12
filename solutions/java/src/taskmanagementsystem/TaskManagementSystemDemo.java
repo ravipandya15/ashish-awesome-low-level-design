@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class TaskManagementSystemDemo {
-    public static void run() {
+    public static void main(String[] args) {
         TaskManager taskManager = TaskManager.getInstance();
 
         // Create users

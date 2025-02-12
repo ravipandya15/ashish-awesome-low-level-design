@@ -6,6 +6,12 @@ public class Book {
     private final String author;
     private final int publicationYear;
     private boolean available;
+    // can we have no. of copies as a field?
+    // need to create rwo variables.
+    //    1. totalCopies
+    //    2. availableCopies. OR
+//            3. assiedCopies
+    // when give book to a user, increment count of assignedCopies OR [decrement available copies]
 
     public Book(String isbn, String title, String author, int publicationYear) {
         this.isbn = isbn;

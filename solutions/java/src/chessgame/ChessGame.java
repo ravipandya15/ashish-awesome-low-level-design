@@ -35,6 +35,7 @@ public class ChessGame {
 
             // Switch to the next player
             currentPlayer = (currentPlayer + 1) % 2;
+//            currentPlayer = 1 - currentPlayer; 1 - 0 = 1, 1 - 1 = 0
         }
 
         // Display game result

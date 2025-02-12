@@ -10,6 +10,7 @@ public class JobPosting {
     private final List<String> requirements;
     private final String location;
     private final Timestamp postDate;
+    // String company
 
     public JobPosting(String id, String title, String description, List<String> requirements, String location, Timestamp postDate) {
         this.id = id;

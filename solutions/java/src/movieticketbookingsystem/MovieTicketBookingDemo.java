@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class MovieTicketBookingDemo {
-    public static void run() {
+    public static void main(String[] args) {
         MovieTicketBookingSystem bookingSystem = MovieTicketBookingSystem.getInstance();
 
         // Add movies

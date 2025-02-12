@@ -3,7 +3,7 @@ package loggingframework;
 import loggingframework.logappender.FileAppender;
 
 public class LoggingFrameworkDemo {
-    public static void run() {
+    public static void main(String[] args) {
         Logger logger = Logger.getInstance();
 
         // Logging with default configuration
@@ -12,7 +12,7 @@ public class LoggingFrameworkDemo {
         logger.error("This is an error message");
 
         // Changing log level and appender
-        LoggerConfig config = new LoggerConfig(LogLevel.DEBUG, new FileAppender("app.log"));
+        LoggerConfig config = new LoggerConfig(LogLevel.DEBUG, new FileAppender("app.log")); // file created inside LLD_Examples folder
         logger.setConfig(config);
 
         logger.debug("This is a debug message");

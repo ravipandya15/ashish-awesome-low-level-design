@@ -19,6 +19,8 @@ public class SplitwiseDemo {
         splitwiseService.addUser(user2);
         splitwiseService.addUser(user3);
 
+        // IF USER1 WANTS TO SEND MONE TO USER2 DIRETLY (WITHOUT ANY GROUP) THEN IT'S EXACT SPLIT.
+
         // Create a group
         Group group = new Group("1", "Apartment");
         group.addMember(user1);
@@ -32,6 +34,9 @@ public class SplitwiseDemo {
         EqualSplit equalSplit1 = new EqualSplit(user1);
         EqualSplit equalSplit2 = new EqualSplit(user2);
         PercentSplit percentSplit = new PercentSplit(user3, 20.0);
+
+        // Generally it should have Enum [Exact, Equal, Percentage] and pass this enum in expense constructor. based on this type, it should internally creates splits and add it to list.
+        // but in that we can only have 1 type of split for given expense.
 
         expense.addSplit(equalSplit1);
         expense.addSplit(equalSplit2);

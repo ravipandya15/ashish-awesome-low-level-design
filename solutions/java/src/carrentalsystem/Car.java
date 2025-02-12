@@ -7,6 +7,9 @@ public class Car {
     private final String licensePlate;
     private final double rentalPricePerDay;
     private boolean available;
+    // I think car is available flag is not required.
+    // as if someone will reserve this car, doesn't mean that I should update this flag to false, as this car is still available for other days.
+    // it's only un available during the period customer book it.
 
     public Car(String make, String model, int year, String licensePlate, double rentalPricePerDay) {
         this.make = make;

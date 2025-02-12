@@ -58,6 +58,9 @@ public class LinkedInService {
             if (connection.getUser().equals(connectionUser)) {
                 user.getConnections().add(new Connection(connectionUser, new Timestamp(System.currentTimeMillis())));
                 break;
+                // looks wrong. double check
+                // as connectionUser is already added in user list, when he/she send connection request.
+                // it should be reverse. Like connectionUser.getConnections.add(new Connection(user, new TimeStamp(System.currentTimeMillis())));
             }
         }
     }

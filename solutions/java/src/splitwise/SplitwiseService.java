@@ -1,6 +1,7 @@
 package splitwise;
 
 import splitwise.splittype.EqualSplit;
+import splitwise.splittype.ExactSplit;
 import splitwise.splittype.PercentSplit;
 import splitwise.splittype.Split;
 
@@ -56,15 +57,17 @@ public class SplitwiseService {
             if (split instanceof EqualSplit) {
                 split.setAmount(splitAmount);
             }
-//            else if (split instanceof PercentSplit percentSplit) {
-//                split.setAmount(totalAmount * percentSplit.getPercent() / 100.0);
-//            }
+            else if (split instanceof PercentSplit) {
+                split.setAmount(totalAmount * ((PercentSplit) split).getPercent() / 100.0);
+            } else if (split instanceof ExactSplit) {
+                // nothing to do. As amount is already set in split. as it's exact split.
+            }
         }
     }
 
     private void updateBalances(Expense expense) {
+        User paidBy = expense.getPaidBy();
         for (Split split : expense.getSplits()) {
-            User paidBy = expense.getPaidBy();
             User user = split.getUser();
             double amount = split.getAmount();
 

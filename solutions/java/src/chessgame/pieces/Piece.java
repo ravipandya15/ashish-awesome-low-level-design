@@ -4,7 +4,7 @@ import chessgame.Board;
 import chessgame.Color;
 
 public abstract class Piece {
-    protected final Color color;
+    protected final Color color; // protected because this class is abstract and these fields can be used by child classes.
     protected int row;
     protected int col;
 

@@ -6,6 +6,7 @@ public class MenuItem {
     private final String description;
     private final double price;
     private boolean available;
+    // can we have quantity as well? initial quantity
 
     public MenuItem(String id, String name, String description, double price) {
         this.id = id;

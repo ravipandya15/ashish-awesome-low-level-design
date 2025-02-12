@@ -4,6 +4,7 @@ import hotelmanagement.payment.CreditCardPayment;
 import hotelmanagement.payment.Payment;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class HotelManagementSystemDemo {
     public static void run() {
@@ -24,6 +25,7 @@ public class HotelManagementSystemDemo {
         // Book a room
         LocalDate checkInDate = LocalDate.now();
         LocalDate checkOutDate = checkInDate.plusDays(3);
+//        LocalDateTime localDateTime = LocalDateTime.now().minusDays();
         Reservation reservation1 = hotelManagementSystem.bookRoom(guest1, room1, checkInDate, checkOutDate);
         if (reservation1 != null) {
             System.out.println("Reservation created: " + reservation1.getId());

@@ -5,7 +5,8 @@ public class Song {
     private final String title;
     private final String artist;
     private final String album;
-    private final int duration;
+    private final int duration; // can have double 5.30 mins -> something like that
+    // If I want to search based on Romantic songs, then I can add song type as well, to search effectively.
 
     public Song(String id, String title, String artist, String album, int duration) {
         this.id = id;

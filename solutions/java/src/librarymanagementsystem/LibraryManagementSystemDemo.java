@@ -3,7 +3,7 @@ package librarymanagementsystem;
 import java.util.List;
 
 public class LibraryManagementSystemDemo {
-    public static void run() {
+    public static void main(String[] args) {
         LibraryManager libraryManager = LibraryManager.getInstance();
 
         // Add books to the catalog

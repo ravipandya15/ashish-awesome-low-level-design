@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MusicStreamingServiceDemo {
-    public static void run() {
+    public static void main(String[] args) {
         MusicStreamingService musicStreamingService = new MusicStreamingService();
 
         // Create users

@@ -88,7 +88,7 @@ public class TaskManager {
     }
 
     public List<Task> getTaskHistory(User user) {
-        return new ArrayList<>(userTasks.getOrDefault(user.getId(), new ArrayList<>()));
+        return new ArrayList<>(userTasks.getOrDefault(user.getId(), new ArrayList<>())); // create new ArrayList instead of returning same array List so if someone will try to update  list, it will not affect existing list of user.
     }
 
     private void assignTaskToUser(User user, Task task) {

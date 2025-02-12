@@ -56,6 +56,7 @@ public class FoodDeliveryService {
     }
 
     public Order placeOrder(String customerId, String restaurantId, List<OrderItem> items) {
+        // we should check that all orderItems are present in specific restaurant or not?
         Customer customer = customers.get(customerId);
         Restaurant restaurant = restaurants.get(restaurantId);
         if (customer != null && restaurant != null) {

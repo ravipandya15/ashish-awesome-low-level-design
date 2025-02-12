@@ -1,7 +1,7 @@
 package ridesharingservice;
 
 public class RideSharingServiceDemo {
-    public static void run() {
+    public static void main(String[] args) {
         RideService rideService = RideService.getInstance();
 
         // Create passengers

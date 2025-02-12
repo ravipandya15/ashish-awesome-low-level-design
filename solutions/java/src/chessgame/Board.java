@@ -56,6 +56,8 @@ public class Board {
     }
 
     public boolean isCheckmate(Color color) {
+        // it's for King only. so need to check King can move to it's 8 surrounded position or not.
+        // check with opponents all piece. that for all 8 position can King be killed or not.
         // TODO: Implement checkmate logic
         return false;
     }
