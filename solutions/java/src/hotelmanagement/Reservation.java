@@ -19,6 +19,8 @@ public class Reservation {
         this.status = ReservationStatus.CONFIRMED;
     }
 
+    // before reservation, I should check whether room is available or not.
+
     public synchronized void cancel() {
         if (status == ReservationStatus.CONFIRMED) {
             status = ReservationStatus.CANCELLED;

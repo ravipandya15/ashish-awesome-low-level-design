@@ -56,6 +56,7 @@ public class Answer implements Votable, Commentable {
         }
         isAccepted = true;
         author.updateReputation(15);  // +15 reputation for accepted answer
+        // store excepted answer explicitly
     }
 
     private int generateId() {

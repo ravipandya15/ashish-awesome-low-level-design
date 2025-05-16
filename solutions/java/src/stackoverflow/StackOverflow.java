@@ -54,6 +54,7 @@ public class StackOverflow {
     }
 
     public void acceptAnswer(Answer answer) {
+        // check is owner of the question should only accept the answer.
         answer.markAsAccepted();
     }
 

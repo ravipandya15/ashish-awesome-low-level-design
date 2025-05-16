@@ -14,6 +14,7 @@ public class Question implements Votable, Commentable {
     private final List<Comment> comments;
     private final List<Tag> tags;
     private final List<Vote> votes;
+    // we can explicitly store accepted answer as well
 
     public Question(User author, String title, String content, List<String> tagNames) {
         this.id = generateId();
