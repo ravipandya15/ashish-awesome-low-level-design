@@ -16,11 +16,12 @@ public class Pawn extends Piece {
         if (color == Color.WHITE) {
             return (rowDiff == 1 && colDiff == 0) ||
                     (row == 1 && rowDiff == 2 && colDiff == 0) ||
-                    (rowDiff == 1 && colDiff == 1 && board.getPiece(destRow, destCol) != null);
+                    (rowDiff == 1 && colDiff == 1 && board.getPiece(destRow, destCol) != null && board.getPiece(destRow, destCol).getColor() != color);
         } else {
             return (rowDiff == -1 && colDiff == 0) ||
                     (row == 6 && rowDiff == -2 && colDiff == 0) ||
-                    (rowDiff == -1 && colDiff == 1 && board.getPiece(destRow, destCol) != null);
+                    (rowDiff == -1 && colDiff == 1 && board.getPiece(destRow, destCol) != null && board.getPiece(destRow, destCol).getColor() != color);
+//            board.getPiece(destRow, destCol).getColor() != color -> This condition is added by me
         }
     }
 }

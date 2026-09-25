@@ -13,5 +13,8 @@ public class Bishop extends Piece {
         int rowDiff = Math.abs(destRow - row);
         int colDiff = Math.abs(destCol - col);
         return (rowDiff == colDiff);
+
+        // Also need to check between row->destRow and col->destCol, is there any Piece of While or Black color? If yes then can't move it.
+        // Is this correct understanding?
     }
 }
