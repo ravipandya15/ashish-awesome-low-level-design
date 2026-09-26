@@ -95,21 +95,14 @@ public class RideService {
         // Notify the passenger about ride status updates
         // ...
         Passenger passenger = ride.getPassenger();
-        String message = "";
-        switch (ride.getStatus()) {
-            case ACCEPTED:
-                message = "Your ride has been accepted by driver: " + ride.getDriver().getName();
-                break;
-            case IN_PROGRESS:
-                message = "Your ride is in progress";
-                break;
-            case COMPLETED:
-                message = "Your ride has been completed. Fare: $" + ride.getFare();
-                break;
-            case CANCELLED:
-                message = "Your ride has been cancelled";
-                break;
-        }
+        String message = switch (ride.getStatus()) {
+            case REQUESTED -> null;
+            case ACCEPTED -> "Your ride has been accepted by driver: " + ride.getDriver().getName();
+            case IN_PROGRESS -> "Your ride is in progress";
+            case COMPLETED -> "Your ride has been completed. Fare: $" + ride.getFare();
+            case CANCELLED -> "Your ride has been cancelled";
+
+        };
         // Send notification to the passenger
         System.out.println("Notifying passenger: " + passenger.getName() + " - " + message);
     }
