@@ -96,11 +96,16 @@ public class RideService {
         // ...
         Passenger passenger = ride.getPassenger();
         String message = switch (ride.getStatus()) {
-            case REQUESTED -> null;
-            case ACCEPTED -> "Your ride has been accepted by driver: " + ride.getDriver().getName();
-            case IN_PROGRESS -> "Your ride is in progress";
-            case COMPLETED -> "Your ride has been completed. Fare: $" + ride.getFare();
-            case CANCELLED -> "Your ride has been cancelled";
+            case REQUESTED:
+                yield null;
+            case ACCEPTED:
+                yield "Your ride has been accepted by driver: " + ride.getDriver().getName();
+            case IN_PROGRESS:
+                yield "Your ride is in progress";
+            case COMPLETED:
+                yield "Your ride has been completed. Fare: $" + ride.getFare();
+            case CANCELLED:
+                yield "Your ride has been cancelled";
 
         };
         // Send notification to the passenger
@@ -110,15 +115,19 @@ public class RideService {
     private void notifyDriver(Ride ride) {
         Driver driver = ride.getDriver();
         if (driver != null) {
-            String message = "";
-            switch (ride.getStatus()) {
+            String message = switch (ride.getStatus()) {
+                case REQUESTED:
+                    yield null;
+                case ACCEPTED:
+                    yield null;
+                case IN_PROGRESS:
+                    yield null;
                 case COMPLETED:
-                    message = "Ride completed. Fare: $" + ride.getFare();
-                    break;
+                    yield "Ride completed. Fare: $" + ride.getFare();
                 case CANCELLED:
-                    message = "Ride cancelled by passenger";
-                    break;
-            }
+                    yield "Ride cancelled by passenger";
+            };
+            
             // Send notification to the driver
             System.out.println("Notifying driver: " + driver.getName() + " - " + message);
         }
